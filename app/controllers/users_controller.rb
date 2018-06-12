@@ -6,7 +6,8 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show
+  def show 
+ 
   end
 
   def new 
@@ -26,7 +27,8 @@ class UsersController < ApplicationController
   def update
   end
 
-  def destroy
+  def destroy 
+    
   end
 
 private

@@ -1,2 +1,15 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>New Post</h1>
+
+<%= form_for @post do |f| %>
+  <%= f.text_field :title, placeholder: "Title" %>
+  <br>
+  <%= f.text_area :body, placeholder: "Your post..." %> 
+  <br> 
+  <%= f.text_area :genre, placeholder: "Genre" %>   
+  <%= f.text_area :style, placeholder: "Style" %>   
+  <%= f.text_area :platform, placeholder: "Platform" %> 
+  <br> 
+  <%= f.text_area :image, placeholder: "Image URL" %> 
+  <br>
+  <%= f.submit %>
+<% end %> 

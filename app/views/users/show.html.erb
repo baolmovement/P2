@@ -1,2 +1,12 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%= current_user.name%>'s Collection</h1>
+
+<h2>Comments:</h2>
+<ul>
+  <% current_user.posts.each do |p| %>
+    <li><%= link_to(p.body, post_path(p)) %>  
+    <%= link_to("Edit", edit_post_path(p)) %>
+    <%= link_to("Delete", "/posts/#{p.id}", method: "delete")%> 
+    </li>
+  <% end %>
+</ul>
+
