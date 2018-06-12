@@ -1,3 +1,16 @@
-<% @posts.each do |p| %>  
-    <a><%= p.title %></a><br>
+<% @posts.each do |p| %>    
+    <div class="container"> 
+        <div class="row"> 
+             <div class="col-md-8 col-lg-6 B">
+                <a><%= p.title %></a><br>
+                <a>by <%= p.user.name %></a><br>
+                <a><%= p.style %></a> 
+                <a><%= p.genre %></a> 
+                <a><%= p.platform %></a>  
+            </div>
+        </div> 
+        <div class="row">  
+            <a><%= p.body %></a> 
+        </div>
+    </div>
 <% end %>
