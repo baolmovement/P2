@@ -6,13 +6,15 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> 
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
   </head>
 
-  <body>   
+  <body>     
   <%= render 'partials/navbar' %>
-  <div class="container">
+  <div class="container-fluid">
     <%= yield %> 
-  </div>
+  </div> 
+   <%= render 'partials/footer' %>
   </body>
 </html>

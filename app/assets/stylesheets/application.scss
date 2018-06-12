@@ -1,1 +1,46 @@
-@import "bootstrap";
+@import "bootstrap"; 
+.title{
+    font-size:100px;
+}
+.b-padding{ 
+    padding:75px 0,
+} 
+.bordera{
+    border:2px solid white;
+} 
+.m-padding{
+    padding:5px 10px; 
+} 
+.nav-z{
+    z-index:1;
+} 
+.content-z{
+    z-index:-500;
+} 
+.no-padding{
+    padding:0; 
+    width:cover;
+} 
+.preview-height{ 
+    height:100vh;
+}   
+.def-bg-img{ 
+    background-image: url("https://images.unsplash.com/photo-1507924267304-e51febff7b1c?ixlib=rb-0.3.5&s=0c0892192a76e451e259e2c904b2ea81&auto=format&fit=crop&w=2508&q=80"); 
+    background-attachment: fixed;
+}   
+.show-bg{
+    background-image: url("https://images.unsplash.com/photo-1505682499293-233fb141754c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=883a78b4f3eb0f0cd95bb247e96e2bae&auto=format&fit=crop&w=800&q=60");   
+    background-repeat: no-repeat;   
+    background-size:contain;      
+    position: relative;  
+}
+.website-font{
+    font-family: 'Special Elite';
+} 
+.unlinkify{
+    color:white
+}
+// .bg-img{ 
+//     background-image:url("#{current_user.post.image}"); 
+//     background-attachment: fixed;
+// }
