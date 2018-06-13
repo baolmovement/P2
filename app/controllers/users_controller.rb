@@ -1,4 +1,7 @@
 class UsersController < ApplicationController 
+
+  before_action :authorize, only: [:show, :edit, :update, :destroy]
+
   def home  
     @users = User.all
   end
@@ -21,14 +24,22 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit
+  def edit 
+    @user = User.find(params[:id])
   end
 
-  def update
+  def update 
+    @user = User.find(params[:id])
+    @user.name = params[:user][:name]
+    @user.email = params[:user][:email]   
+    @user.save
+    redirect_to user_path(@user)
   end
 
   def destroy 
-    
+    current_user.destroy 
+    session[:user_id] = nil #deletes cookies 
+    redirect_to new_user_path
   end
 
 private
