@@ -1,28 +1,30 @@
-<div class="container-fluid index-bg preview-height">
-    <% @posts.in_groups_of(3) do |p1, p2, p3| %>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card flex-md-row mb-4 box-shadow h-md-250">
-                    <div class="card-body">
+<div class="container-fluid index-bg preview-height"><%# In a page-wide sub-container that stretches to window height...%>
+<%# ------------------------------------------------------------------------------- %>    
+    <% @posts.in_groups_of(3) do |p1, p2, p3| %><%# In series of three, prints...%>
+        <div class="row"><%# One row...%>
+            <div class="col-md-4"><%# With a column a third of page-width...%>
+                <div class="card flex-md-row mb-4 box-shadow h-md-250"><%# With a responsive card row with margin and fixed height...%>
+                    <div class="card-body"><%# In a sub-container that never exceeds the card dimensions...%> 
+                        <%# Post's ...%>
                         <strong class="d-inline-block mb-2 text-success"><%= p1.platform %> || <%= p1.style %> || <%= p1.genre %></strong>
                         <h3 class="card-title"><%= p1.title %></h3>
                         <div class="text-muted"><%= p1.created_at %></div>
-                        <%# <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> %>
-                        <%= link_to "Continue Reading", post_path(p1) %>
-                    </div>
+                        <%= link_to "Continue Reading", post_path(p1) %><%# Link to Post's show page...%>
+                    </div> 
+                    <%# Post's image ...%>
                     <img class="card-img-right flex-auto d-none d-lg-block float-right" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
                         style="width: 200px; height: 250px;" src="<%= p1.image %>"
                     data-holder-rendered="true"> 
                 </div>
             </div>
-            <% if p2 %>
+<%# ------------------------------------------------------------------------------- %>            
+            <% if p2 %><%# If there's 2 posts a new row of 3, execute same commands ...%>
             <div class="col-md-4">
                 <div class="card flex-md-row mb-4 box-shadow h-md-250">
                     <div class="card-body">
                         <strong class="d-inline-block mb-2 text-success"><%= p2.platform %> || <%= p2.style %> || <%= p2.genre %></strong>
                         <h3 class="card-title"><%= p2.title %></h3>
                         <div class="text-muted"><%= p2.created_at %></div>
-                        <%# <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> %>
                         <%= link_to "Continue Reading", post_path(p2) %>
                     </div>
                     <img class="card-img-right flex-auto d-none d-lg-block float-right" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
@@ -31,7 +33,8 @@
                 </div>
             </div>
             <% end %>  
-            <% if p3 %>
+<%# ------------------------------------------------------------------------------- %>            
+            <% if p3 %><%# If there's a third post a new row of 3, execute same commands ...%>
             <div class="col-md-4">
                 <div class="card flex-md-row mb-4 box-shadow h-md-250">
                     <div class="card-body">
@@ -47,8 +50,10 @@
                 </div>
             </div>
             <% end %> 
+<%# ------------------------------------------------------------------------------- %>        
         </div>
-    <% end %> 
+    <% end %>  
+<%# ------------------------------------------------------------------------------- %>
 </div>
 
 

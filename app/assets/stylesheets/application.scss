@@ -31,7 +31,7 @@
 .show-bg{
     background-image: url("https://images.unsplash.com/photo-1505682499293-233fb141754c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=883a78b4f3eb0f0cd95bb247e96e2bae&auto=format&fit=crop&w=800&q=60");   
     background-repeat: no-repeat;   
-    background-size:contain;      
+    background-size:cover;      
     position: relative;  
 }
 .website-font{
@@ -50,4 +50,11 @@
 } 
 .trans-bg{
     background-color: rgba(0,0,0,0.5);
+} 
+.no-padding{
+    padding:0;
+} 
+.d-linkify{
+    color:white;
+    font-size:25px;
 }

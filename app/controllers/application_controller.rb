@@ -1,9 +1,13 @@
 class ApplicationController < ActionController::Base
     # make the below methods available in our view templates:  
-    helper_method :current_user, :logged_in?, :default_background_url
+    helper_method :current_user, :logged_in?, :default_background_url, :home?
   
     def current_user
       @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    end
+
+    def home? 
+      !!root_path
     end
   
     def logged_in?

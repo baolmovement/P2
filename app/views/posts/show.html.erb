@@ -1,2 +1,14 @@
-<h1>Posts#show</h1>
-<%= @post.body %> 
+
+ <div class="row disp-margin text-white preview-height align-middle bg-img" style="background-image: url('<%= @post.image.length > 0 ? @post.image : default_bg_url %>');"> 
+    <div class="col-lg-12 text-center align-middle">
+        <p class="title"><a><%= @post.title %></a></p>
+        <h3><a>by <%= @post.user.name %></a></h3>
+        <a class="bordera m-padding"><%= @post.style %></a> 
+        <a class="bordera m-padding"><%= @post.genre %></a> 
+        <a class="bordera m-padding"><%= @post.platform %></a>  
+    </div>
+</div>   
+<%# ------------------------------------------------------------------------------- %>
+<div class="row b-padding bg-white">    
+    <a class="col-lg-12 text-center"><%= @post.body %></a> 
+</div>

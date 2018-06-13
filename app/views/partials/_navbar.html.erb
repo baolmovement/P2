@@ -1,10 +1,12 @@
 
-  <div class="navbar sticky-top trans-bg row"> 
+<div class="navbar sticky-top trans-bg row">   
+<%# NAVBAR------------------------------------------------------------------------------- %>    
     <div class="col-lg-1">   
       <ul class="navbar-nav mr-auto d-inline-block">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle d-inline-block" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+          
+          <a class="nav-link dropdown-toggle d-inline-block d-linkify" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu
           </a> 
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">   
             <% if logged_in? %>
@@ -32,13 +34,19 @@
               </a>
             <% end %>
           </div>
+        
         </li>  
       </ul> 
     </div> 
+<%# STATIC COMPANY LOGO------------------------------------------------------------------------------- %>    
     <div class="col-lg-10">
       <h1 class="text-white website-font d-inline-block text-center container-fluid">Elevator Pitch</h1>    
-    </div>
-    <div class="col-lg-1 text-right">
-      <%= link_to("Grid View","/posts") %> 
-    </div>
-    </div>
+    </div>  
+<%# GRID/HOME VIEW AHREF------------------------------------------------------------------------ %>
+    <% if home? %>
+      <div class="col-lg-1 text-right d-linkify">
+        <%= link_to("Grid View","/posts") %> 
+      </div> 
+    <% end %>
+<%# ------------------------------------------------------------------------------- %>    
+</div>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html> 
+<%# ------------------------------------------------------------------------------- %>
   <head>
     <title>ElevatorPitch</title>
     <%= csrf_meta_tags %>
@@ -9,13 +10,17 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> 
     <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
   </head>
-
-  <body>       
-  <%= render 'partials/navbar' %> 
-    
-  <div class="container-fluid preview-height">
-    <%= yield %> 
-  </div> 
-   <%= render 'partials/footer' %>
-  </body>
+<%# ------------------------------------------------------------------------------- %>
+  <body>  
+<%# ------------------------------------------------------------------------------- %>      
+  <div class="container-fluid preview-height no-padding">  
+<%# ------------------------------------------------------------------------------- %>
+    <%= render 'partials/navbar' %> 
+    <%= yield %>  
+    <%= render 'partials/footer' %> 
+<%# ------------------------------------------------------------------------------- %>
+  </div>  
+<%# ------------------------------------------------------------------------------- %>
+  </body> 
+<%# ------------------------------------------------------------------------------- %>
 </html>
