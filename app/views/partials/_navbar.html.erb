@@ -1,11 +1,11 @@
-
-<div class="navbar sticky-top trans-bg row">   
-<%# NAVBAR------------------------------------------------------------------------------- %>    
+<%# NAVBAR------------------------------------------------------------------------------- %>  
+<div class="navbar sticky-top bg-dark row">   
+<%# NAVBAR(INSIDE)------------------------------------------------------------------------------- %>    
     <div class="col-lg-1">   
       <ul class="navbar-nav mr-auto d-inline-block">
         <li class="nav-item dropdown">
           
-          <a class="nav-link dropdown-toggle d-inline-block d-linkify" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle d-inline-block text-white web-font" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Menu
           </a> 
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">   
@@ -45,7 +45,7 @@
 <%# GRID/HOME VIEW AHREF------------------------------------------------------------------------ %>
     <% if home? %>
       <div class="col-lg-1 text-right d-linkify">
-        <%= link_to("Grid View","/posts") %> 
+        <%= link_to("Grid View","/posts",class:"text-white web-font") %> 
       </div> 
     <% end %>
 <%# ------------------------------------------------------------------------------- %>    

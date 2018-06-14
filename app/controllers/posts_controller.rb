@@ -1,10 +1,20 @@
 class PostsController < ApplicationController
   def home 
-    @posts = Post.all
+    @posts = Post.all 
+    # @f_posts = Post.where(platform:'FILM') 
+    # @t_posts = Post.where(platform:'TELEVISION') 
+    # @b_posts = Post.where(platform:'BOOK')
   end     
   
-  def index  
-    @posts = Post.all 
+  def index
+    if params[:platform] 
+      @posts = Post.where(platform: params[:platform])
+    else
+      @posts = Post.all 
+    end  
+    # @f_posts = Post.where(platform:'FILM') 
+    # @t_posts = Post.where(platform:'TELEVISION') 
+    # @b_posts = Post.where(platform:'BOOK')
   end
   
   def show   

@@ -1,5 +1,5 @@
 
- <div class="row disp-margin text-white preview-height align-middle bg-img" style="background-image: url('<%= @post.image.length > 0 ? @post.image : default_bg_url %>');"> 
+ <div class="row disp-margin text-white preview-height align-middle bg-cover" style="background-image: url('<%= @post.image.length > 0 ? @post.image : default_background_url %>');"> 
     <div class="col-lg-12 text-center align-middle">
         <p class="title"><a><%= @post.title %></a></p>
         <h3><a>by <%= @post.user.name %></a></h3>
