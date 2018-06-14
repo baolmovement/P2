@@ -1,31 +1,35 @@
 <% @posts.each do |p| %> <%# loops through Post database and prints...%>   
     <div class="container-fluid d-block"> <%# In a page-wide container (on its own line)...%>
 <%# ------------------------------------------------------------------------------- %>        
-        <div class="row disp-margin text-white preview-height bg-cover" style="background-image: url('<%= p.image.length > 0 ? p.image : default_background_url %>');"> 
+        <div class="row disp-margin text-white preview-height bg-cover bg-img align-items-center" style="background-image: url('<%= p.image.length > 0 ? p.image : default_background_url %>');"> 
         <%# In a row that stretches the page height with white text and custom or default img background ...%>  
         <%# ...on condition whether User has submitted an URL...%>
-            <div class="col-lg-12 text-center align-middle"><%# In one page-wide column with centered text...%>
-                <p class="h1"><a><%= p.title %></a></p><%# Post's title...%>
+            <div class="col-lg-12 text-center mx-auto"><%# In one page-wide column with centered text...%>
+                <p class="h1 mb-2 t-fontsize"><a><%= p.title %></a></p><%# Post's title...%>
                 <a class="bordera m-padding"><%= p.style %></a><%# Post's style with padding and border...%>
                 <a class="bordera m-padding"><%= p.genre %></a><%# Post's genre with padding and border...%>
                 <a class="bordera m-padding"><%= p.platform %></a><%# Post's intended platform with padding and border...%>    
-                <h3><%= p.likes.length %> likes</h3> 
-                <%= p.body %> 
-            </a>
+                <h3 class="mt-2"><%= p.likes.length %> likes</h3> 
+                <h4 class="mt-4"><%= p.body %></h4> 
             </div>
         </div>
 <%# ------------------------------------------------------------------------------- %>        
         <div class="row b-padding bg-white text-center"> <%# In another row, below, with white background, prints...%>  
             
-               <h3>by <%= p.user.name %></h3><%# Post's author...%> 
+               <h3 class="col-lg-12 text-center">by <%= p.user.name %></h3><%# Post's author...%> 
             <%# Single page-wide column with Post's body...%> 
         </div>
 <%# ------------------------------------------------------------------------------- %>  
+        
         <div class="row no-padding bg-white h1">  
-            <a class="col-lg-12 text-center"> 
-                <%= link_to "Like", (p), method: :post %> 
-            </a>
-        </div>
+            <h3 class="col-lg-12 text-center"> 
+                <%= link_to "Like", post_likes_path(p), method: :post %> 
+            </h3> 
+            <h4 class="col-lg-12 text-center">
+                <%=link_to("Back to the top","#", class:'text-dark')%> 
+            </h4>
+        </div> 
+        
 <%# ------------------------------------------------------------------------------- %> 
     </div>
 <% end %>

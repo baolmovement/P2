@@ -1,14 +1,18 @@
-
- <div class="row disp-margin text-white preview-height align-middle bg-cover" style="background-image: url('<%= @post.image.length > 0 ? @post.image : default_background_url %>');"> 
-    <div class="col-lg-12 text-center align-middle">
-        <p class="title"><a><%= @post.title %></a></p>
-        <h3><a>by <%= @post.user.name %></a></h3>
-        <a class="bordera m-padding"><%= @post.style %></a> 
-        <a class="bordera m-padding"><%= @post.genre %></a> 
-        <a class="bordera m-padding"><%= @post.platform %></a>  
+<div class="row disp-margin text-white preview-height bg-cover bg-img" style="background-image: url('<%= @post.image.length > 0 ? @post.image : default_background_url %>');"> 
+    <div class="col-sm-12 text-center align-middle">
+        <div class="align-middle">  
+            <a class="title"><%= @post.title %></a>
+            <h3><a>by <%= @post.user.name %></a></h3>
+            <a class="bordera m-padding"><%= @post.style %></a> 
+            <a class="bordera m-padding"><%= @post.genre %></a> 
+            <a class="bordera m-padding"><%= @post.platform %></a>  
+        </div>
     </div>
 </div>   
 <%# ------------------------------------------------------------------------------- %>
 <div class="row b-padding bg-white">    
-    <a class="col-lg-12 text-center"><%= @post.body %></a> 
-</div>
+    <a class="col-lg-12 text-center"><%= @post.body %></a>   
+    <%= link_to "Like", post_likes_path(@post), method: :post %>   
+      <h3><%= @post.likes.length %> likes</h3> 
+</div> 
+<%# ------------------------------------------------------------------------------- %>
