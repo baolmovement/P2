@@ -1,22 +1,19 @@
-
-<h1 class="text-center">New Post</h1>
-
-<div class=" row preview-height align-middle">
-<div class="col-lg-12 text-center">
-<%= form_for @post do |f| %>
-  <%= f.text_field :title, placeholder: "Title" %>
-  <br>
-  <%= f.text_area :body, placeholder: "Your post..." %> 
-  <br> 
-  <%= f.text_area :genre, placeholder: "Genre" %>   
-  <br>  
-  <%= f.text_area :style, placeholder: "Style" %>   
-  <br> 
-  <%= f.select :platform, ['FILM', 'TELEVISION','BOOK']%> 
-  <br> 
-  <%= f.text_area :image, placeholder: "Image URL" %> 
-  <br>
-  <%= f.submit %>
+<div class="row preview-height new-bg"> 
+<div class="col-lg-12 text-center pt-5">
+<%= form_for @post do |f| %> 
+  <h1 class="mb-4">New Post</h1> 
+    <%= f.text_field :title, size: "44x10", placeholder: "Title", class:'mb-1' %>
+    <br>
+    <%= f.text_area :body, size: "44x10", placeholder: "Your post..." %> 
+    <br> 
+    <%= f.text_area :style, placeholder: "Style", class:'mb-1' %>   
+    <%= f.text_area :genre, placeholder: "Genre", class:'mb-1' %>   
+    <br>  
+    <%= f.select :platform, ['FILM', 'TELEVISION','BOOK'] %> 
+    <br> 
+    <%= f.text_area :image, size: "44 X 5", placeholder: "Image URL", class:'my-2' %> 
+    <br>
+    <%= f.submit class:'btn btn-success' %>
 <% end %>  
 </div>
 </div>

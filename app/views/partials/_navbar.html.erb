@@ -1,10 +1,12 @@
 <%# NAVBAR------------------------------------------------------------------------------- %>  
-<div class="navbar nav-height sticky-top bg-black row">   
+<div class="navbar nav-height sticky-top bg-black text-center">   
 <%# DROPDOWN------------------------------------------------------------------------------- %>    
-    <div class="col-lg-1">   
-      <ul class="navbar-nav mr-auto d-inline-block">
+      <ul class="navbar-nav mx-auto">
+
         <li class="nav-item dropdown">
-          
+          <div class>
+            <h1 class="text-white website-font d-inline-block text-center container-fluid">Elevator Pitch</h1>    
+          </div>  
           <a class="nav-link dropdown-toggle d-inline-block text-white web-font" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Menu
           </a> 
@@ -17,7 +19,8 @@
             <% end %>
             <a class="dropdown-item">  
               <%= link_to 'Home', '/', class:'nav-link text-dark w-font' %> 
-            </a>  
+            </a>   
+            <%= link_to("All Posts","/posts",class:"nav-link text-dark w-font") %> 
             <% unless logged_in? %>
               <a class="dropdown-item">  
                 <%= link_to 'Sign Up', new_user_path, class:'nav-link text-dark  w-font' %>
@@ -37,19 +40,7 @@
         
         </li>  
       </ul> 
-    </div> 
 <%# STATIC COMPANY LOGO------------------------------------------------------------------------------- %>    
-    <div class="col-lg-10">
-      <h1 class="text-white website-font d-inline-block text-center container-fluid">Elevator Pitch</h1>    
-    </div>  
-<%# GRID/HOME VIEW AHREF------------------------------------------------------------------------ %>
-    <% if home? %>
-      <div class="col-lg-1 text-right d-linkify">
-        <%= link_to("Grid View","/posts",class:"text-white web-font") %> 
-      </div> 
-    <% end %> 
-    <% unless home? %> 
-      <p>poop</p> 
-    <% end %>
+    
 <%# ------------------------------------------------------------------------------- %>    
 </div>

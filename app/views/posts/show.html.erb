@@ -1,18 +1,33 @@
-<div class="row disp-margin text-white preview-height bg-cover bg-img" style="background-image: url('<%= @post.image.length > 0 ? @post.image : default_background_url %>');"> 
-    <div class="col-sm-12 text-center align-middle">
-        <div class="align-middle">  
-            <a class="title"><%= @post.title %></a>
-            <h3><a>by <%= @post.user.name %></a></h3>
-            <a class="bordera m-padding"><%= @post.style %></a> 
-            <a class="bordera m-padding"><%= @post.genre %></a> 
-            <a class="bordera m-padding"><%= @post.platform %></a>  
+<div class="container-fluid d-block"> <%# In a page-wide container (on its own line)...%>
+<%# ------------------------------------------------------------------------------- %>        
+        <div class="row disp-margin text-white preview-height bg-cover bg-img align-items-center" style="background-image: url('<%= @post.image.length > 0 ? @post.image : default_background_url %>');"> 
+        <%# In a row that stretches the page height with white text and custom or default img background ...%>  
+        <%# ...on condition whether User has submitted an URL...%>
+            <div class="col-lg-12 text-center mx-auto"><%# In one page-wide column with centered text...%>
+                <p class="h1 mb-2 t-fontsize"><a><%= @post.title %></a></p><%# Post's title...%>
+                <a class="bordera m-padding"><%= @post.style %></a><%# Post's style with padding and border...%>
+                <a class="bordera m-padding"><%= @post.genre %></a><%# Post's genre with padding and border...%>
+                <a class="bordera m-padding"><%= @post.platform %></a><%# Post's intended platform with padding and border...%>    
+                <h3 class="mt-2"><%= @post.likes.length %> likes</h3> 
+                <h4 class="mt-4"><%= @post.body %></h4> 
+            </div>
         </div>
+<%# ------------------------------------------------------------------------------- %>        
+        <div class="row b-padding bg-white text-center"> <%# In another row, below, with white background, prints...%>  
+            
+               <h3 class="col-lg-12 text-center w-font">by <%= @post.user.name %></h3><%# Post's author...%> 
+            <%# Single page-wide column with Post's body...%> 
+        </div>
+<%# ------------------------------------------------------------------------------- %>  
+        
+        <div class="row no-padding bg-white h1">  
+            <h3 class="col-lg-12 text-center"> 
+                <%= link_to "Like", post_likes_path(@post), method: :post %> 
+            </h3> 
+            <h4 class="col-lg-12 text-center">
+                <%=link_to("Back to the top","#", class:'text-dark')%> 
+            </h4>
+        </div> 
+        
+<%# ------------------------------------------------------------------------------- %> 
     </div>
-</div>   
-<%# ------------------------------------------------------------------------------- %>
-<div class="row b-padding bg-white">    
-    <a class="col-lg-12 text-center"><%= @post.body %></a>   
-    <%= link_to "Like", post_likes_path(@post), method: :post %>   
-      <h3><%= @post.likes.length %> likes</h3> 
-</div> 
-<%# ------------------------------------------------------------------------------- %>
