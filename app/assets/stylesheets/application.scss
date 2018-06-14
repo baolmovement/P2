@@ -49,6 +49,12 @@
 } 
 .footer-bg{
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8c/Overlook_Hotel_Carpet_%2815682295092%29.jpg")
+} 
+
+.new-bg{
+    background-image: url("https://i.imgur.com/gRiC36j.jpg");
+    background-size:cover; 
+    background-attachment: fixed;
 }
 .no-padding{
     padding:0;
@@ -61,7 +67,10 @@
 .bg-cover{
     background-size:cover;
     background-repeat:no-repeat; 
-} 
+}  
+.bg-black{
+    background-color: black;
+}
 .nav-height{
     height:125px;
 } 
@@ -70,4 +79,21 @@
 } 
 .t-fontsize{
     font-size: 150px;
+} 
+
+.nowviewing{
+    border-radius:100px;
+}   
+
+.p-height{
+    height:200px;
+} 
+
+.show-height{
+    height:204px
+} 
+
+.border-black{
+    border:1px solid black;
 }
+

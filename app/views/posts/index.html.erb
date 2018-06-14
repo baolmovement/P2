@@ -1,6 +1,6 @@
-<div class="container-fluid index-bg preview-height"><%# In a page-wide sub-container that stretches to window height...%>
+<div class="container-fluid bg-dark preview-height"><%# In a page-wide sub-container that stretches to window height...%>
     <% if params[:platform] %>
-        <h1>Viewing <%= params[:platform] %> posts (<%= link_to "View all", posts_path %>):</h1>
+        <h1 class="bg-warning nowviewing py-4 text-center w-font">Viewing <%= params[:platform] %> posts (<%= link_to "View all", posts_path %>):</h1>
     <% end %>
 
 <%# ------------------------------------------------------------------------------- %>    
@@ -10,10 +10,10 @@
                 <div class="card flex-md-row mb-4 box-shadow h-md-250"><%# With a responsive card row with margin and fixed height...%>
                     <div class="card-body"><%# In a sub-container that never exceeds the card dimensions...%> 
                         <%# Post's ...%>
-                        <strong class="d-inline-block mb-2 text-success"><%= link_to(p1.platform, "#{posts_path}?platform=#{p1.platform}") %> || <%= p1.style %> || <%= p1.genre %></strong>
+                        <strong class="d-inline-block mb-2 text-dark"><%= link_to(p1.platform, "#{posts_path}?platform=#{p1.platform}") %> || <%= p1.style %> || <%= p1.genre %></strong>
                         <h3 class="card-title"><%= p1.title %></h3>
                         <div class="text-muted"><%= p1.created_at %></div>
-                        <%= link_to "Continue Reading", post_path(p1) %><%# Link to Post's show page...%>
+                        <h2 class="mt-5"><%= link_to "SEE POST", post_path(p1) %></h2><%# Link to Post's show page...%>
                     </div> 
                     <%# Post's image ...%>
                     <img class="card-img-right flex-auto d-none d-lg-block float-right" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
@@ -26,10 +26,10 @@
             <div class="col-md-4">
                 <div class="card flex-md-row mb-4 box-shadow h-md-250">
                     <div class="card-body">
-                        <strong class="d-inline-block mb-2 text-success"><%= link_to(p2.platform, "#{posts_path}?platform=#{p2.platform}") %> || <%= p2.style %> || <%= p2.genre %></strong>
+                        <strong class="d-inline-block mb-2 text-dark"><%= link_to(p2.platform, "#{posts_path}?platform=#{p2.platform}") %> || <%= p2.style %> || <%= p2.genre %></strong>
                         <h3 class="card-title"><%= p2.title %></h3>
                         <div class="text-muted"><%= p2.created_at %></div>
-                        <%= link_to "Continue Reading", post_path(p2) %>
+                        <h2 class="mt-5"><%= link_to "SEE POST", post_path(p2) %></h2>
                     </div>
                     <img class="card-img-right flex-auto d-none d-lg-block float-right" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
                         style="width: 200px; height: 250px;" src="<%= p2.image.length > 0 ? p2.image : default_background_url %>"
@@ -42,11 +42,11 @@
             <div class="col-md-4">
                 <div class="card flex-md-row mb-4 box-shadow h-md-250">
                     <div class="card-body">
-                        <strong class="d-inline-block mb-2 text-success"><%= link_to(p1.platform, "#{posts_path}?platform=#{p1.platform}") %>|| <%= p3.style %> || <%= p3.genre %></strong>
+                        <strong class="d-inline-block mb-2 text-dark"><%= link_to(p1.platform, "#{posts_path}?platform=#{p1.platform}") %>|| <%= p3.style %> || <%= p3.genre %></strong>
                         <h3 class="card-title"><%= p3.title %></h3>
                         <div class="text-muted"><%= p3.created_at %></div>
                         <%# <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> %>
-                        <%= link_to "Continue Reading", post_path(p3) %>
+                        <h2 class="mt-5"><%= link_to "SEE POST", post_path(p3)%></h2>
                     </div>
                     <img class="card-img-right flex-auto d-none d-lg-block float-right" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
                         style="width: 200px; height: 250px;" src="<%= p3.image.length > 0 ? p3.image : default_background_url %>"
