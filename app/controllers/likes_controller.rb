@@ -1,6 +1,7 @@
 class LikesController < ApplicationController 
-  before_action :authorize, only: [:create]
+  before_action :authorize, only: [:create]  
   def create  
+#Redirects to Sign Up view page unless you're logged in---------------------------------------------------------  
     unless logged_in?
       redirect_to new_user_path
     end
@@ -15,11 +16,7 @@ class LikesController < ApplicationController
     if @like.save
       redirect_to root_path
     end 
-#-----------------------------------------------------  
-  
-#-----------------------------------------------------  
-    
-#-----------------------------------------------------   
+#-----------------------------------------------------    
   end
 #-----------------------------------------------------  
 end

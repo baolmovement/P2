@@ -1,94 +1,17 @@
 @import "bootstrap"; 
-.title{
-    font-size:100px;
-}
-.b-padding{ 
-    padding:25px 0,
-} 
-.bordera{
-    border:2px solid white;
-} 
-.m-padding{
-    padding:5px 10px; 
-} 
-
-.no-padding{
-    padding:0; 
-    width:cover;
-} 
+//DIMENSIONS-------------------------------------------------------------------------------------------------------
 .preview-height{ 
     height:100vh;
-}   
-// .def-bg-img{ 
-//     background-image: url("https://images.unsplash.com/photo-1507924267304-e51febff7b1c?ixlib=rb-0.3.5&s=0c0892192a76e451e259e2c904b2ea81&auto=format&fit=crop&w=2508&q=80"); 
-//     background-attachment: fixed;
-// }   
-.show-bg{
-    background-image: url("https://images.unsplash.com/photo-1505682499293-233fb141754c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=883a78b4f3eb0f0cd95bb247e96e2bae&auto=format&fit=crop&w=800&q=60");   
-    background-repeat: no-repeat;   
-    background-size:cover;      
-    position: relative;  
-}
-.website-font{
-    font-family: 'Special Elite'; 
-    font-size:75px;
-}  
-.web-font{
-    font-family: 'Special Elite'; 
-    font-size:20px;
-}   
-.w-font{
-    font-family: 'Special Elite'; 
-} 
-.w-font-small{ 
-    font-family: 'Special Elite'; 
-    font-size:5px;
-}
-.bg-img{ 
-    // background-image:url("#{current_user.post.image}"); 
-    background-attachment: fixed; 
-    background-position: center;
-} 
-.index-bg{
-    background-image: url("https://images.unsplash.com/photo-1513705153361-9bc726c8db67?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e2245195e81395e587f51a3b64f56b21&auto=format&fit=crop&w=2767&q=80")
-} 
-.footer-bg{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8c/Overlook_Hotel_Carpet_%2815682295092%29.jpg")
-} 
-
-.new-bg{
-    background-image: url("https://i.imgur.com/gRiC36j.jpg");
-    background-size:cover; 
-    background-attachment: fixed;
-}
-.no-padding{
-    padding:0;
-} 
-.d-linkify{
-    color:white;
-    font-size:25px;
-} 
+}    
 
 .bg-cover{
     background-size:cover;
     background-repeat:no-repeat; 
-}  
-.bg-black{
-    background-color: black;
-}
+}   
+
 .nav-height{
     height:125px;
 } 
-.vcenter {
-   height:50vh;
-} 
-.t-fontsize{
-    font-size: 150px;
-} 
-
-.nowviewing{
-    border-radius:100px;
-}   
 
 .p-height{
     height:200px;
@@ -98,11 +21,110 @@
     height:204px
 } 
 
-.border-black{
-    border:1px solid black;
-} 
+
 
 .wwidth{
     width:33vw;
 }
+//BORDERS-------------------------------------------------------------------------------------------------------
+.bordera{
+    border:2px solid white;
+}  
+
+.border-black{
+    border:1px solid black;
+}  
+
+.nowviewing{
+    border-radius:100px;
+}   
+//BACKGROUND-------------------------------------------------------------------------------------------------------
+.show-bg{
+    background-image: url("https://images.unsplash.com/photo-1505682499293-233fb141754c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=883a78b4f3eb0f0cd95bb247e96e2bae&auto=format&fit=crop&w=800&q=60");   
+    background-repeat: no-repeat;   
+    background-size:cover;      
+    position: relative;  
+} 
+
+.bg-img{ 
+    background-attachment: fixed; 
+    background-position: center;
+} 
+
+.index-bg{
+    background-image: url("https://images.unsplash.com/photo-1513705153361-9bc726c8db67?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e2245195e81395e587f51a3b64f56b21&auto=format&fit=crop&w=2767&q=80")
+} 
+
+.footer-bg{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8c/Overlook_Hotel_Carpet_%2815682295092%29.jpg")
+} 
+
+.new-bg{
+    background-image: url("https://i.imgur.com/gRiC36j.jpg");
+    background-size:cover; 
+    background-attachment: fixed;
+} 
+
+.bg-black{
+    background-color: black;
+}
+//FONTS-------------------------------------------------------------------------------------------------------
+.title{
+    font-size:100px;
+} 
+
+.website-font{
+    font-family: 'Special Elite'; 
+    font-size:75px;
+}  
+
+.web-font{
+    font-family: 'Special Elite'; 
+    font-size:20px;
+}   
+
+.w-font{
+    font-family: 'Special Elite'; 
+} 
+
+.w-font-small{ 
+    font-family: 'Special Elite'; 
+    font-size:5px;
+} 
+
+.d-linkify{
+    color:white;
+    font-size:25px;
+}  
+
+.t-fontsize{
+    font-size: 150px;
+} 
+//SPACING-------------------------------------------------------------------------------------------------------
+.b-padding{ 
+    padding:25px 0,
+} 
+
+.m-padding{
+    padding:5px 10px; 
+} 
+
+.no-padding{
+    padding:0; 
+    width:cover;
+} 
+
+.no-padding{
+    padding:0;
+} 
+
+
+
+
+
+
+
+
+
+
 

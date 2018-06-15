@@ -1,6 +1,7 @@
 class UsersController < ApplicationController 
 
   before_action :authorize, only: [:show, :edit, :update, :destroy]
+#Initiates cookie history once user is authenticated--------------------------------------------------------------------------------
 
   def home  
     @users = User.all

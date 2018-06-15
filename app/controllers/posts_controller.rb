@@ -1,12 +1,14 @@
 class PostsController < ApplicationController
   def home 
+    #Instance variable for hash with all posts in Post database------------------------------------------------------
     @posts = Post.all 
     # @f_posts = Post.where(platform:'FILM') 
     # @t_posts = Post.where(platform:'TELEVISION') 
     # @b_posts = Post.where(platform:'BOOK')
   end     
   
-  def index
+  def index 
+#Conditional instance variable depending on the current platform------------------------------------------------------
     if params[:platform] 
       @posts = Post.where(platform: params[:platform])
     else
@@ -17,11 +19,13 @@ class PostsController < ApplicationController
     # @b_posts = Post.where(platform:'BOOK')
   end
   
-  def show   
+  def show  
+#Instance variable for current post--------------------------------------------------------------------------------
     @post = Post.find(params[:id]) 
   end
 
   def new 
+#Instance variable for new post--------------------------------------------------------------------------------    
     @post = Post.new
   end
 
@@ -66,8 +70,3 @@ class PostsController < ApplicationController
   end
 end 
 
-#       t.string :title
-#       t.string :body
-#       t.string :genre
-#       t.string :style
-#       t.string :platform
