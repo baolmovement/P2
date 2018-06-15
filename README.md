@@ -47,3 +47,14 @@ used for unique, custom styling
 ## ERD 
 
 ![](https://i.imgur.com/g1skW1S.png)
+
+---
+---
+
+# Wireframe 
+![](https://i.imgur.com/FmK7KU7.png)
+
+--- 
+---
+
+# TRELLO [CLICK HERE](https://trello.com/b/8t5tFQK0/p2-elevator-pitch)
