@@ -9,7 +9,7 @@
                 <a class="bordera m-padding"><%= @post.genre %></a><%# Post's genre with padding and border...%>
                 <a class="bordera m-padding"><%= @post.platform %></a><%# Post's intended platform with padding and border...%>    
                 <h3 class="mt-2"><%= @post.likes.length %> likes</h3> 
-                <h4 class="mt-4"><%= @post.body %></h4> 
+                <h4 class="mt-4"><%= @post.body.first(750) %></h4> 
             </div>
         </div>
 <%# ------------------------------------------------------------------------------- %>        

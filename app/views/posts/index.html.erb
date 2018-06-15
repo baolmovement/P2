@@ -13,7 +13,7 @@
                         <strong class="d-inline-block mb-2 text-dark"><%= link_to(p1.platform, "#{posts_path}?platform=#{p1.platform}") %> </strong>
                         <strong class="d-block"><%= p1.style %> || <%= p1.genre %></strong>
                         <h3 class="card-title"><%= p1.title %></h3>
-                        <div class="text-muted"><%= p1.created_at %></div>
+                        <div class="text-muted"><%= time_ago_in_words(p1.created_at) %> ago</div>
                         <h2 class="mt-4"><%= link_to "SEE POST", post_path(p1) %></h2><%# Link to Post's show page...%>
                     </div> 
                     <%# Post's image ...%>
@@ -30,7 +30,7 @@
                         <strong class="d-inline-block mb-2 text-dark"><%= link_to(p2.platform, "#{posts_path}?platform=#{p2.platform}") %> </strong>
                         <strong class="d-block"><%= p2.style %> || <%= p2.genre %></strong>
                         <h3 class="card-title"><%= p2.title %></h3>
-                        <div class="text-muted"><%= p2.created_at %></div>
+                        <div class="text-muted"><%= time_ago_in_words(p2.created_at) %> ago</div>
                         <h2 class="mt-4"><%= link_to "SEE POST", post_path(p2) %></h2>
                     </div>
                     <img class="card-img-right flex-auto d-none d-lg-block float-right card-body" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
@@ -47,7 +47,7 @@
                         <strong class="d-inline-block mb-2 text-dark"><%= link_to(p1.platform, "#{posts_path}?platform=#{p1.platform}") %></strong>
                         <strong class="d-block"><%= p3.style %> || <%= p3.genre %></strong>
                         <h3 class="card-title"><%= p3.title %></h3>
-                        <div class="text-muted"><%= p3.created_at %></div>
+                        <div class="text-muted"><%= time_ago_in_words(p3.created_at) %> ago</div>
                         <%# <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> %>
                         <h2 class="mt-4"><%= link_to "SEE POST", post_path(p3)%></h2>
                     </div>
